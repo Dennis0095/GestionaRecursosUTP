@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="paginaUsuario.jsp"><i class="fas fa-desktop"></i> Bienvenido</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="registrarEquipo.jsp"><i class="fas fa-plus-square"></i> Agregar<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="consultarEquipo.jsp"><i class="fas fa-search"></i> Consultar</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="usuarios.jsp"> <i class="fas fa-users"></i> Usuarios</a>
+        </li>
+    </ul>
+        <div>
+             <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-item nav-link disabled" href="error404.jsp">Usuario: ${usuario}</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-door-open"></i> Salir</a>
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Alerta</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body ">
+                                        <center><h6>¿Seguro que quieres cerrar la sesión? </h6></center>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">No, no quiero :v</button>
+                                        <a href="<%=request.getContextPath()%>/USUARIOcontroller.do?txtProceso=logout" ><button type="button" class="btn btn-danger"><i class="fas fa-power-off"></i>&nbsp;Si, estoy seguro </button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                </li>
+             </ul>
+        </div>
+    </div>
+</nav>
+                                    
